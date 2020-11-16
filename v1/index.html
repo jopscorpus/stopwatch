@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>stopWatch</title>
+
+        <link rel="stylesheet" href="stylesheet.css">
+        <script type="text/javascript" src="script.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+
+    <body>
+        <!-- <script>
+            let seconds = 0;
+            let minutes = 0;
+            let hours = 0;
+
+            function start(){
+                console.log("say your prayer little one");
+                seconds++;
+            
+                //Increment minutes
+                if (seconds/60 === 1) {
+                    seconds = 0;
+                    minutes++;
+
+                    if (minutes/60 === 1) {
+                        console.log("don't forget my son, to include everyone")
+                        mintues = 0;
+                        hours++;
+                    }
+                }
+            
+                document.getElementById("timeDisplay").innerHTML = hours + ":" + minutes + ":" + seconds;
+            }
+
+            w
+
+            function reset(){
+                console.log('Stop');
+            }
+
+        </script> -->
+        <div class="header" id="header" hidden> 
+            <h1 class="header-message" id="header-message">
+                This is a stopwatch
+            </h1>
+        </div>
+
+        <div class="instructions">
+            <div class="features" hidden>
+                <p id="featureMain">This stop watch:</p>
+                <li id="featureOne">Displays time.</li>
+                <li id="featureTwo">Can be started.</li>
+                <li id="featureThree">Can be stopped.</li>
+                <li id="featureFour">Can be paused.</li>
+                <li id="featureFive">Can be reset.</li>
+            </div>
+        </div>
+
+        <div class="timeDisplay" id="timeDisplay">
+            00:00:00
+            <!-- <h1>
+                <span id="hour">00</span>
+                <span id="minute">00</span>
+                <span id="seconds">00</span>
+            </h1> -->
+        </div>
+        <div class="controls">
+            <button id="startTimer" onclick="startStop();">Start</button>
+            <button id="endTimer" onclick="reset();">Reset</button>
+        </div>
+
+    </body>
+    
+</html>

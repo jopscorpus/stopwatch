@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>stopWatch</title>
+        <link rel="stylesheet" href="stylesheet.css">
+        <script type="text/javascript" src="script.js"></script>
+    </head>
+
+    <body>
+        <div class="header" id="header" hidden> 
+            <h1 class="header-message" id="header-message">
+                This is a stopwatch
+            </h1>
+        </div>
+        <div class="timeDisplay" id="timeDisplay">
+            00:00:00
+        </div>
+        <div class="controls">
+            <button id="startTimer" onclick="startStop();">Start</button>
+            <button id="lap" hidden>Lap</button>
+            <button id="endTimer" onclick="reset();">Reset</button>
+        </div>
+    </body>
+    
+</html>

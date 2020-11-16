@@ -1,0 +1,13 @@
+.timeDisplay {
+    background-color: aqua;
+    text-align: center;
+    height: 300;
+    width: 100%;
+    padding: 10px;
+    font-size: 80px;
+}
+
+.controls {
+    text-align: center;
+    padding: 10px;
+}
