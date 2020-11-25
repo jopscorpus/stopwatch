@@ -18,9 +18,23 @@
         </div>
         <div class="controls">
             <button id="startTimer" onclick="startStop();">Start</button>
-            <button id="lap" hidden>Lap</button>
+            <button id="lap" hidden onclick="lap()">Lap</button>
             <button id="endTimer" onclick="reset();">Reset</button>
         </div>
+
+        <div id="lapTime"></div>
+
+        <div class="calc">
+            <input id="a"></input>
+            <input id="b"></input>
+            <button id="adds" onclick="calculate();">calculate</button>
+            <select id="operation">
+                <option>add</option>
+                <option>subtract</option>
+            </select>
+            <h1 id="output"></h1>
+        </div>
+
     </body>
     
 </html>

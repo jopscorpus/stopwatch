@@ -54,6 +54,7 @@ window.startStop = function() {
 //Reset timer to 00:00:00
 function reset() {
     window.clearInterval(interval);
+    
     seconds = 0;
     minutes = 0;
     hours = 0;
@@ -64,3 +65,48 @@ function reset() {
     
 }
 
+function createLap(elementName,time) {
+    console.log({elementName,time});
+    var h = document.createElement(elementName); 
+    var t = document.createTextNode(time);
+    h.appendChild(t);
+    return h;
+}
+
+
+//Log time 
+function lap() {
+    let currentTime = document.getElementById("timeDisplay").innerHTML;
+    
+    let h = createLap("h1",currentTime);
+    document.getElementById("lapTime").appendChild(h);
+}
+
+
+function calculate() {
+    operation = document.getElementById("operation").value;
+    let a = parseInt(document.getElementById("a").value);
+    let b = parseInt(document.getElementById("b").value);
+    let s;
+
+    if (operation == "add") {
+       let sum = add(a,b);
+       s = sum;
+    } else {
+       let diff = subtract(a,b);
+       s = diff;
+    }
+
+    console.log({s});
+    document.getElementById("output").innerText = s;
+}
+
+function add(a,b) {
+    console.log(a+b);
+    return a+b;
+}
+
+function subtract(a,b) {
+    console.log(a-b);
+    return a-b;
+}
